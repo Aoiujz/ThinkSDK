@@ -34,4 +34,4 @@ SDK的配置格式如下（可参考DEMO中的配置）
 
 * 添加ThinkPHP扩展，将整个ThinkSDK目录放入到ThinkPHP的扩展目录下~Extend/Library/ORG/~。    
 * 添加SDK配置，按以上配置格式在项目配置中添加对应的SDK配置。（可参考DEMO中的配置文件）    
-* 跳转到授权页面，导入SDK基类~import("ORG.ThinkSDK.ThinkOauth");~，获取SDK实例~$sns=ThinkOauth::getInstance($type)~，跳转到授权页面~redirect($sns->getRequestCodeURL())~。（可参考DEMO中的Index/login方法）
+* 跳转到授权页面，导入SDK基类`import("ORG.ThinkSDK.ThinkOauth")`，获取SDK实例`$sns=ThinkOauth::getInstance($type)`，跳转到授权页面`redirect($sns->getRequestCodeURL())`。（可参考DEMO中的Index/login方法）
