@@ -1,37 +1,37 @@
-### 1£¬SDK¼ò½é
+### 1ï¼ŒSDKç®€ä»‹
 
-±¾SDKÊÇ»ùÓÚThinkPHP¿ª·¢Àà¿âÀ©Õ¹£¬Òò´ËÖ»ÄÜÔÚThinkPHPÆ½Ì¨ÏÂÊ¹ÓÃ£¨ThinkPHP°æ±¾ÒªÇó2.0ÒÔÉÏ£©¡£DEMOÖÐÓÃµ½ÁË¿ØÖÆÆ÷·Ö²ã£¬Òò´ËÔËÐÐDEMOÐèÊ¹ÓÃThinkPHP3.1.2°æ±¾¡£
+æœ¬SDKæ˜¯åŸºäºŽThinkPHPå¼€å‘ç±»åº“æ‰©å±•ï¼Œå› æ­¤åªèƒ½åœ¨ThinkPHPå¹³å°ä¸‹ä½¿ç”¨ï¼ˆThinkPHPç‰ˆæœ¬è¦æ±‚2.0ä»¥ä¸Šï¼‰ã€‚DEMOä¸­ç”¨åˆ°äº†æŽ§åˆ¶å™¨åˆ†å±‚ï¼Œå› æ­¤è¿è¡ŒDEMOéœ€ä½¿ç”¨ThinkPHP3.1.2ç‰ˆæœ¬ã€‚
 
-### 2£¬Ä¿Ç°Ö§³ÖµÄÆ½Ì¨
-Ä¿Ç°¿ÉÓÃµÇÂ¼Æ½Ì¨Îª£ºÌÚÑ¶QQ£¬ÌÚÑ¶Î¢²©£¬ÐÂÀËÎ¢²©£¬ÍøÒ×Î¢²©£¬ÈËÈËÍø£¬360£¬¶¹°ê£¬Github£¬Google£¬MSN¡£
+### 2ï¼Œç›®å‰æ”¯æŒçš„å¹³å°
+ç›®å‰å¯ç”¨ç™»å½•å¹³å°ä¸ºï¼šè…¾è®¯QQï¼Œè…¾è®¯å¾®åšï¼Œæ–°æµªå¾®åšï¼Œç½‘æ˜“å¾®åšï¼Œäººäººç½‘ï¼Œ360ï¼Œè±†ç“£ï¼ŒGithubï¼ŒGoogleï¼ŒMSNã€‚
 
-### 3£¬°üº¬µÄÎÄ¼þ
+### 3ï¼ŒåŒ…å«çš„æ–‡ä»¶
 
-ThinkSDK/ThinkOauth.class.php SDK»ùÀà£¬Ö÷ÒªÓÃÓÚOauthµÄÈÏÖ¤£¬ËùÓÐÆ½Ì¨µÄSDK¾ùÐèÒª¼Ì³Ð´ËÀà    
-ThinkSDK/sdk/DoubanSDK.class.php £¨¶¹°êSDK£©    
-ThinkSDK/sdk/GithubSDK.class.php £¨Github SDK£©    
-ThinkSDK/sdk/GoogleSDK.class.php £¨Google SDK£©    
-ThinkSDK/sdk/MsnSDK.class.php £¨MSN SDK£©    
-ThinkSDK/sdk/QqSDK.class.php £¨ÌÚÑ¶QQ SDK£©    
-ThinkSDK/sdk/RenrenSDK.class.php £¨ÈËÈËÍøSDK£©    
-ThinkSDK/sdk/SinaSDK.class.php £¨ÐÂÀËÎ¢²©SDK£©    
-ThinkSDK/sdk/T163SDK.class.php £¨ÍøÒ×Î¢²©SDK£©    
-ThinkSDK/sdk/TencentSDK.class.php £¨ÌÚÑ¶Î¢²©SDK£©    
-ThinkSDK/sdk/X360SDK.class.php £¨360 SDK£©
+ThinkSDK/ThinkOauth.class.php SDKåŸºç±»ï¼Œä¸»è¦ç”¨äºŽOauthçš„è®¤è¯ï¼Œæ‰€æœ‰å¹³å°çš„SDKå‡éœ€è¦ç»§æ‰¿æ­¤ç±»    
+ThinkSDK/sdk/DoubanSDK.class.php ï¼ˆè±†ç“£SDKï¼‰    
+ThinkSDK/sdk/GithubSDK.class.php ï¼ˆGithub SDKï¼‰    
+ThinkSDK/sdk/GoogleSDK.class.php ï¼ˆGoogle SDKï¼‰    
+ThinkSDK/sdk/MsnSDK.class.php ï¼ˆMSN SDKï¼‰    
+ThinkSDK/sdk/QqSDK.class.php ï¼ˆè…¾è®¯QQ SDKï¼‰    
+ThinkSDK/sdk/RenrenSDK.class.php ï¼ˆäººäººç½‘SDKï¼‰    
+ThinkSDK/sdk/SinaSDK.class.php ï¼ˆæ–°æµªå¾®åšSDKï¼‰    
+ThinkSDK/sdk/T163SDK.class.php ï¼ˆç½‘æ˜“å¾®åšSDKï¼‰    
+ThinkSDK/sdk/TencentSDK.class.php ï¼ˆè…¾è®¯å¾®åšSDKï¼‰    
+ThinkSDK/sdk/X360SDK.class.php ï¼ˆ360 SDKï¼‰
 
-### 4£¬ÅäÖÃ¸ñÊ½
+### 4ï¼Œé…ç½®æ ¼å¼
 
-SDKµÄÅäÖÃ¸ñÊ½ÈçÏÂ£¨¿É²Î¿¼DEMOÖÐµÄÅäÖÃ£©
+SDKçš„é…ç½®æ ¼å¼å¦‚ä¸‹ï¼ˆå¯å‚è€ƒDEMOä¸­çš„é…ç½®ï¼‰
 
-	//½«Ò»ÏÂ(TYPE)»»³ÉÄã¶ÔÓ¦µÄSDKÀàÐÍ
+	//å°†ä¸€ä¸‹(TYPE)æ¢æˆä½ å¯¹åº”çš„SDKç±»åž‹
 	'THINK_SDK_(TYPE)' => array(
-		'APP_KEY'    => '', //Ó¦ÓÃ×¢²á³É¹¦ºó·ÖÅäµÄ APP ID
-		'APP_SECRET' => '', //Ó¦ÓÃ×¢²á³É¹¦ºó·ÖÅäµÄKEY
-		'CALLBACK'   => '', //×¢²áÓ¦ÓÃÌîÐ´µÄcallback
+		'APP_KEY'    => '', //åº”ç”¨æ³¨å†ŒæˆåŠŸåŽåˆ†é…çš„ APP ID
+		'APP_SECRET' => '', //åº”ç”¨æ³¨å†ŒæˆåŠŸåŽåˆ†é…çš„KEY
+		'CALLBACK'   => '', //æ³¨å†Œåº”ç”¨å¡«å†™çš„callback
 	)
 
-### 5£¬Ê¹ÓÃ·½·¨
+### 5ï¼Œä½¿ç”¨æ–¹æ³•
 
-a Ìí¼ÓThinkPHPÀ©Õ¹£¬½«Õû¸öThinkSDKÄ¿Â¼·ÅÈëµ½ThinkPHPµÄÀ©Õ¹Ä¿Â¼ÏÂ~Extend/Library/ORG/~¡£    
-b Ìí¼ÓSDKÅäÖÃ£¬°´ÒÔÉÏÅäÖÃ¸ñÊ½ÔÚÏîÄ¿ÅäÖÃÖÐÌí¼Ó¶ÔÓ¦µÄSDKÅäÖÃ¡££¨¿É²Î¿¼DEMOÖÐµÄÅäÖÃÎÄ¼þ£©    
-c Ìø×ªµ½ÊÚÈ¨Ò³Ãæ£¬µ¼ÈëSDK»ùÀà~import("ORG.ThinkSDK.ThinkOauth");~£¬»ñÈ¡SDKÊµÀý~$sns=ThinkOauth::getInstance($type)~£¬Ìø×ªµ½ÊÚÈ¨Ò³Ãæ~redirect($sns->getRequestCodeURL())~¡££¨¿É²Î¿¼DEMOÖÐµÄIndex/login·½·¨£©
+a æ·»åŠ ThinkPHPæ‰©å±•ï¼Œå°†æ•´ä¸ªThinkSDKç›®å½•æ”¾å…¥åˆ°ThinkPHPçš„æ‰©å±•ç›®å½•ä¸‹~Extend/Library/ORG/~ã€‚    
+b æ·»åŠ SDKé…ç½®ï¼ŒæŒ‰ä»¥ä¸Šé…ç½®æ ¼å¼åœ¨é¡¹ç›®é…ç½®ä¸­æ·»åŠ å¯¹åº”çš„SDKé…ç½®ã€‚ï¼ˆå¯å‚è€ƒDEMOä¸­çš„é…ç½®æ–‡ä»¶ï¼‰    
+c è·³è½¬åˆ°æŽˆæƒé¡µé¢ï¼Œå¯¼å…¥SDKåŸºç±»~import("ORG.ThinkSDK.ThinkOauth");~ï¼ŒèŽ·å–SDKå®žä¾‹~$sns=ThinkOauth::getInstance($type)~ï¼Œè·³è½¬åˆ°æŽˆæƒé¡µé¢~redirect($sns->getRequestCodeURL())~ã€‚ï¼ˆå¯å‚è€ƒDEMOä¸­çš„Index/loginæ–¹æ³•ï¼‰
