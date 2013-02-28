@@ -90,7 +90,8 @@ abstract class ThinkOauth{
 	 */
 	public function __construct($token = null){
 		//设置SDK类型
-		$this->Type = strtoupper(substr($this->name(), 0, strlen($this->name())-3));
+		$class = get_class($this);
+		$this->Type = strtoupper(substr($class, 0, strlen($class)-3));
 
 		//获取应用配置
 		$config = C("THINK_SDK_{$this->Type}");
@@ -117,14 +118,6 @@ abstract class ThinkOauth{
     		halt(L('_CLASS_NOT_EXIST_') . ':' . $name);
     	}
     }
-
-    /**
-     * 获取子类类名
-     * @return string 子类类名
-     */
-    private function name(){
-		return get_class($this);
-	}
 	
 	/**
 	 * 初始化配置
