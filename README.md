@@ -8,17 +8,25 @@
 ### 包含的文件
 
 ThinkSDK/ThinkOauth.class.php    SDK基类，主要用于Oauth的认证，所有平台的SDK均需要继承此类    
-ThinkSDK/sdk/DoubanSDK.class.php **豆瓣SDK**    
-ThinkSDK/sdk/GithubSDK.class.php **Github SDK**    
-ThinkSDK/sdk/GoogleSDK.class.php **Google SDK**    
-ThinkSDK/sdk/MsnSDK.class.php **MSN SDK**    
-ThinkSDK/sdk/QqSDK.class.php **腾讯QQ SDK**    
-ThinkSDK/sdk/RenrenSDK.class.php **人人网SDK**    
-ThinkSDK/sdk/SinaSDK.class.php **新浪微博SDK**    
-ThinkSDK/sdk/T163SDK.class.php **网易微博SDK**    
-ThinkSDK/sdk/TencentSDK.class.php **腾讯微博SDK**    
-ThinkSDK/sdk/X360SDK.class.php **360 SDK**
+ThinkSDK/sdk/DoubanSDK.class.php （豆瓣SDK)    
+ThinkSDK/sdk/GithubSDK.class.php （Github SDK)    
+ThinkSDK/sdk/GoogleSDK.class.php （Google SDK)    
+ThinkSDK/sdk/MsnSDK.class.php （MSN SDK)    
+ThinkSDK/sdk/QqSDK.class.php （腾讯QQ SDK)    
+ThinkSDK/sdk/RenrenSDK.class.php （人人网SDK)    
+ThinkSDK/sdk/SinaSDK.class.php （新浪微博SDK)    
+ThinkSDK/sdk/T163SDK.class.php （网易微博SDK)    
+ThinkSDK/sdk/TencentSDK.class.php （腾讯微博SDK)    
+ThinkSDK/sdk/X360SDK.class.php （360 SDK）
 
+### 配置格式
+	
+	//将一下TYPE换成你对应的SDK类型（可参考DEMO中的配置）
+	'THINK_SDK_(TYPE)' => array(
+		'APP_KEY'    => '', //应用注册成功后分配的 APP ID
+		'APP_SECRET' => '', //应用注册成功后分配的KEY
+		'CALLBACK'   => '', //注册应用填写的callback
+	)
 
 
 使用方法
