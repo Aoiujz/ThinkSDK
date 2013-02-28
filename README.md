@@ -34,13 +34,13 @@ SDK的配置格式如下（可参考DEMO中的配置）
 
 * 添加ThinkPHP扩展，将整个ThinkSDK目录放入到ThinkPHP的扩展目录下~Extend/Library/ORG/~。
 * 添加SDK配置，按以上配置格式在项目配置中添加对应的SDK配置。（可参考DEMO中的配置文件）
-* 跳转到授权页面，导入SDK基类`import("ORG.ThinkSDK.ThinkOauth")`，获取SDK实例`$sns=ThinkOauth::getInstance($type)`，跳转到授权页面`redirect($sns->getRequestCodeURL())`。（可参考DEMO中的`Index/login`方法）
-* 获取`access_token`，在授权成功的回调页面中，调用`$sns->getAccessToken($code, $extend)`方法来获取`access_token`。（可参考DEMO中的`Index/callback`方法）
+* 跳转到授权页面，导入SDK基类`import("ORG.ThinkSDK.ThinkOauth")`，获取SDK实例`$sdk=ThinkOauth::getInstance($type)`，跳转到授权页面`redirect($sdk->getRequestCodeURL())`。（可参考DEMO中的`Index/login`方法）
+* 获取`access_token`，在授权成功的回调页面中，调用`$sdk->getAccessToken($code, $extend)`方法来获取`access_token`。（可参考DEMO中的`Index/callback`方法）
 
 ### 6，调用API方法
 
-成功获取到`access_token`之后就可以调用相应平台的API了，调用方法比较简单，如下：
+成功获取到`access_token`之后就可以调用相应平台的API了，调用方法比较简单，只需要调用`$sdk->call($api, $param, $method)`方法就可以了，其中：`$api`为接口名称，`$param`为接口参数（格式：`name1=value1&name2=value2`）, `$method`为请求方法（`GET`或`POST`）。例如：
 
 	import("ORG.ThinkSDK.ThinkOauth"); //导入SDK基类
 	$qq   = ThinkOauth::getInstance('qq', $token); //实例化腾讯QQ开放平台对象 $token 参数为授权成功后获取到的 $token
-	$data = $qq->call($api, $param, $method); //调用接口 $api 为接口名称，$param 为接口参数（格式：name1=value1&name2=value2）, $method 为请求方法（GET或POST）
+	$data = $qq->call($api, $param, $method); //调用接口 
