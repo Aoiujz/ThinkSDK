@@ -5,12 +5,10 @@
 ### 目前支持的平台
 目前可用登录平台为：腾讯QQ，腾讯微博，新浪微博，网易微博，人人网，360，豆瓣，Github，Google，MSN。
 
+### 包含的文件
 
-
-包含文件
-**************** 核心文件 ********************
-/ThinkPHP/Extend/Library/ORG/SNS_SDK
-/ThinkPHP/Extend/Action/SnsSdkAction.class.php
+ThinkSDK/ThinkOauth.class.php    SDK基类，主要用于Oauth的认证，所有平台的SDK均需要继承此类。    
+ThinkSDK/sdk/DoubanSDK.class.php 豆瓣SDK 
 
 **************** 项目文件 ********************
 /项目目录/Lib/OauthAction.class.php 
