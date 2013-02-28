@@ -45,7 +45,7 @@ class IndexAction extends Action{
 		//请妥善保管这里获取到的Token信息，方便以后API调用
 		//调用方法，实例化SDK对象的时候直接作为构造函数的第二个参数传入
 		//如： $qq = ThinkOauth::getInstance('qq', $token);
-		$token = $sns->getAccessToken($this->_get('code'), $extend);
+		$token = $sns->getAccessToken($code , $extend);
 
 		//获取当前登录用户信息
 		if(is_array($token)){
