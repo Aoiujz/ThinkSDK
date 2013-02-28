@@ -7,7 +7,7 @@
 
 ### 3，包含的文件
 
-ThinkSDK/ThinkOauth.class.php    SDK基类，主要用于Oauth的认证，所有平台的SDK均需要继承此类    
+ThinkSDK/ThinkOauth.class.php SDK基类，主要用于Oauth的认证，所有平台的SDK均需要继承此类    
 ThinkSDK/sdk/DoubanSDK.class.php （豆瓣SDK）    
 ThinkSDK/sdk/GithubSDK.class.php （Github SDK）    
 ThinkSDK/sdk/GoogleSDK.class.php （Google SDK）    
