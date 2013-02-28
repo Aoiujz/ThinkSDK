@@ -35,12 +35,6 @@ class QqSDK extends ThinkOauth{
 	 * @var string
 	 */
 	protected $ApiBase = 'https://graph.qq.com/';
-	
-	/**
-	 * 微博类型（目前不可修改）
-	 * @var string
-	 */
-	protected $Type = 'QQ';
 
 	/**
 	 * 组装接口调用参数 并调用接口

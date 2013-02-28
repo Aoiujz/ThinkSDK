@@ -31,12 +31,6 @@ class T163SDK extends ThinkOauth{
 	protected $ApiBase = 'https://api.t.163.com/';
 
 	/**
-	 * 微博类型（目前不可修改）
-	 * @var string
-	 */
-	protected $Type = 'T163';
-
-	/**
 	 * 组装接口调用参数 并调用接口
 	 * @param  string $api    微博API
 	 * @param  string $param  调用API的额外参数

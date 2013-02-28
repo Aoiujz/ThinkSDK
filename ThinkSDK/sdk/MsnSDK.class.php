@@ -35,12 +35,6 @@ class MsnSDK extends ThinkOauth{
 	 * @var string
 	 */
 	protected $ApiBase = 'https://apis.live.net/v5.0/';
-	
-	/**
-	 * 微博类型（目前不可修改）
-	 * @var string
-	 */
-	protected $Type = 'MSN';
 
 	/**
 	 * 组装接口调用参数 并调用接口

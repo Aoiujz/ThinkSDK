@@ -31,12 +31,6 @@ class RenrenSDK extends ThinkOauth{
 	protected $ApiBase = 'http://api.renren.com/restserver.do';
 
 	/**
-	 * 微博类型（目前不可修改）
-	 * @var string
-	 */
-	protected $Type = 'RENREN';
-
-	/**
 	 * 组装接口调用参数 并调用接口
 	 * @param  string $api    微博API
 	 * @param  string $param  调用API的额外参数

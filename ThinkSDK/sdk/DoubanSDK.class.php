@@ -29,12 +29,6 @@ class DoubanSDK extends ThinkOauth{
 	 * @var string
 	 */
 	protected $ApiBase = 'https://api.douban.com/v2/';
-	
-	/**
-	 * 微博类型（目前不可修改）
-	 * @var string
-	 */
-	protected $Type = 'DOUBAN';
 
 	/**
 	 * 组装接口调用参数 并调用接口

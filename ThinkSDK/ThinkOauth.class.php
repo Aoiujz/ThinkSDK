@@ -55,12 +55,6 @@ abstract class ThinkOauth{
 	protected $Authorize = '';
 	
 	/**
-	 * 调用接口类型
-	 * @var string
-	 */
-	protected $Type = '';
-	
-	/**
 	 * 获取request_code请求的URL
 	 * @var string
 	 */
@@ -83,12 +77,21 @@ abstract class ThinkOauth{
 	 * @var array
 	 */
 	protected $Token = null;
+
+	/**
+	 * 调用接口类型
+	 * @var string
+	 */
+	private $Type = '';
 	
 	/**
 	 * 构造方法，配置应用信息
 	 * @param array $token 
 	 */
 	public function __construct($token = null){
+		//设置SDK类型
+		$this->Type = strtoupper(substr($this->name(), 0, strlen($this->name())-3));
+
 		//获取应用配置
 		$config = C("THINK_SDK_{$this->Type}");
 		if($config['APP_KEY'] && $config['APP_SECRET']){
@@ -114,6 +117,14 @@ abstract class ThinkOauth{
     		halt(L('_CLASS_NOT_EXIST_') . ':' . $name);
     	}
     }
+
+    /**
+     * 获取子类类名
+     * @return string 子类类名
+     */
+    private function name(){
+		return get_class($this);
+	}
 	
 	/**
 	 * 初始化配置

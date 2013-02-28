@@ -35,12 +35,6 @@ class GoogleSDK extends ThinkOauth{
 	 * @var string
 	 */
 	protected $ApiBase = 'https://www.googleapis.com/oauth2/v1/';
-	
-	/**
-	 * 微博类型（目前不可修改）
-	 * @var string
-	 */
-	protected $Type = 'GOOGLE';
 
 	/**
 	 * 组装接口调用参数 并调用接口

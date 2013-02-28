@@ -31,12 +31,6 @@ class X360SDK extends ThinkOauth{
 	protected $ApiBase = 'https://openapi.360.cn/';
 
 	/**
-	 * 微博类型（目前不可修改）
-	 * @var string
-	 */
-	protected $Type = 'X360';
-
-	/**
 	 * 组装接口调用参数 并调用接口
 	 * @param  string $api    360开放平台API
 	 * @param  string $param  调用API的额外参数
