@@ -39,8 +39,10 @@ SDK的配置格式如下（可参考DEMO中的配置）
 
 ### 6，调用API方法
 
-成功获取到`access_token`之后就可以调用相应平台的API了，调用方法比较简单，只需要调用`$sdk->call($api, $param, $method)`方法就可以了，其中：`$api`为接口名称，`$param`为接口参数（格式：`name1=value1&name2=value2`）, `$method`为请求方法（`GET`或`POST`）。例如：
+成功获取到`access_token`之后就可以调用相应平台的API了，调用方法比较简单，只需要调用`$sdk->call($api, $param, $method)`方法就可以了，其中：`$api`为接口名称，`$param`为接口参数（格式：`name1=value1&name2=value2`）, `$method`为请求方法（`GET`或`POST`）。
+
+例如：
 
 	import("ORG.ThinkSDK.ThinkOauth"); //导入SDK基类
 	$qq   = ThinkOauth::getInstance('qq', $token); //实例化腾讯QQ开放平台对象 $token 参数为授权成功后获取到的 $token
-	$data = $qq->call($api, $param, $method); //调用接口 
+	$data = $qq->call('user/get_user_info'); //调用接口 
