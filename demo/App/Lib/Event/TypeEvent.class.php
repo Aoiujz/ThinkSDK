@@ -172,4 +172,20 @@ class TypeEvent{
 			throw_exception("获取msn用户信息失败：{$data}");
 		}
 	}
+
+	//登录成功，获取点点用户信息
+	public function diandian($token){
+		$diandian  = ThinkOauth::getInstance('diandian', $token);
+		$data      = $diandian->call('user/info');
+
+		if(!empty($data['meta']['status']) && $data['meta']['status'] == 200){
+			$userInfo['type'] = 'DIANDIAN';
+			$userInfo['name'] = $data['response']['name'];
+			$userInfo['nick'] = $data['response']['name'];
+			$userInfo['head'] = "https://api.diandian.com/v1/blog/{$data['response']['blogs'][0]['blogUuid']}/avatar/144";
+			return $userInfo;
+		} else {
+			throw_exception("获取点点用户信息失败：{$data}");
+		}
+	}
 }
