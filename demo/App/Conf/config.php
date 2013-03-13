@@ -79,5 +79,11 @@ return array(
 		'APP_KEY'    => '', //应用注册成功后分配的 APP ID
 		'APP_SECRET' => '', //应用注册成功后分配的KEY
 		'CALLBACK'   => URL_CALLBACK . 'diandian',
+	),
+	//淘宝网配置
+	'THINK_SDK_TAOBAO' => array(
+		'APP_KEY'    => '', //应用注册成功后分配的 APP ID
+		'APP_SECRET' => '', //应用注册成功后分配的KEY
+		'CALLBACK'   => URL_CALLBACK . 'taobao',
 	)
 );

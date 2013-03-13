@@ -188,4 +188,23 @@ class TypeEvent{
 			throw_exception("获取点点用户信息失败：{$data}");
 		}
 	}
+
+	//登录成功，获取淘宝网用户信息
+	public function taobao($token){
+		$taobao = ThinkOauth::getInstance('taobao', $token);
+		$fields = 'user_id,nick,sex,buyer_credit,avatar,has_shop,vip_info';
+		$data   = $taobao->call('taobao.user.buyer.get', "fields={$fields}");
+		
+		if(!empty($data['user_buyer_get_response']['user'])){
+			$user = $data['user_buyer_get_response']['user'];
+			$userInfo['type'] = 'TAOBAO';
+			$userInfo['name'] = $user['user_id'];
+			$userInfo['nick'] = $user['nick'];
+			$userInfo['head'] = $user['avatar'];
+			return $userInfo;
+		} else {
+			throw_exception("获取淘宝网用户信息失败：{$data['error_response']['msg']}");
+		}
+	}
+
 }
