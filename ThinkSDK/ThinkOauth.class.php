@@ -243,7 +243,7 @@ abstract class ThinkOauth{
 	 * 抽象方法，在SNSSDK中实现
 	 * 组装接口调用参数 并调用接口
 	 */
-	abstract protected function call($api, $param, $method);
+	abstract protected function call($api, $param = '', $method = 'GET');
 	
 	/**
 	 * 抽象方法，在SNSSDK中实现
