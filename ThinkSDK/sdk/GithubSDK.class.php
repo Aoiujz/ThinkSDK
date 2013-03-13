@@ -57,7 +57,7 @@ class GithubSDK extends ThinkOauth{
 			$data['openid'] = $this->openid();
 			return $data;
 		} else
-			throw_exception("获取 Github ACCESS_TOKEN出错：未知错误");
+			throw new Exception("获取 Github ACCESS_TOKEN出错：未知错误");
 	}
 	
 	/**
@@ -72,7 +72,7 @@ class GithubSDK extends ThinkOauth{
 		if(!empty($data['id']))
 			return $data['id'];
 		else
-			throw_exception('没有获取到 Github 用户ID！');
+			throw new Exception('没有获取到 Github 用户ID！');
 	}
 	
 }

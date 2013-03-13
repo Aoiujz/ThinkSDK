@@ -63,7 +63,7 @@ class TencentSDK extends ThinkOauth{
 		if($data['access_token'] && $data['expires_in'] && $data['openid'])
 			return $data;
 		else
-			throw_exception("获取腾讯微博 ACCESS_TOKEN 出错：{$result}");
+			throw new Exception("获取腾讯微博 ACCESS_TOKEN 出错：{$result}");
 	}
 	
 	/**
@@ -75,6 +75,6 @@ class TencentSDK extends ThinkOauth{
 		if(isset($data['openid']))
 			return $data['openid'];
 		else
-			throw_exception('没有获取到openid！');
+			throw new Exception('没有获取到openid！');
 	}
 }

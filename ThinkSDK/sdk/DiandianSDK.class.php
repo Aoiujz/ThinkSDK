@@ -58,7 +58,7 @@ class DiandianSDK extends ThinkOauth{
 			unset($data['uid']);
 			return $data;
 		} else
-			throw_exception("获取点点网ACCESS_TOKEN出错：{$data['error']}");
+			throw new Exception("获取点点网ACCESS_TOKEN出错：{$data['error']}");
 	}
 	
 	/**
@@ -70,6 +70,6 @@ class DiandianSDK extends ThinkOauth{
 		if(isset($data['openid']))
 			return $data['openid'];
 		else
-			throw_exception('没有获取到点点网用户ID！');
+			throw new Exception('没有获取到点点网用户ID！');
 	}
 }

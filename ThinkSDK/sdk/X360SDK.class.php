@@ -58,7 +58,7 @@ class X360SDK extends ThinkOauth{
 			$data['openid'] = $this->openid();
 			return $data;
 		} else
-			throw_exception("获取360开放平台ACCESS_TOKEN出错：{$data['error']}");
+			throw new Exception("获取360开放平台ACCESS_TOKEN出错：{$data['error']}");
 	}
 	
 	/**
@@ -73,7 +73,7 @@ class X360SDK extends ThinkOauth{
 		if(!empty($data['id']))
 			return $data['id'];
 		else
-			throw_exception('没有获取到360开放平台用户ID！');
+			throw new Exception('没有获取到360开放平台用户ID！');
 	}
 	
 }

@@ -11,7 +11,7 @@
 // config.php 2013-02-25
 
 //定义回调URL通用的URL
-define('URL_CALLBACK', 'http://extend.cn/index.php?m=Index&a=callback&type=');
+define('URL_CALLBACK', 'http://demo.cn/index.php?m=Index&a=callback&type=');
 
 return array(
 	//腾讯QQ登录配置

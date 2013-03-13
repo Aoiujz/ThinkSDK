@@ -58,7 +58,7 @@ class T163SDK extends ThinkOauth{
 			unset($data['uid']);
 			return $data;
 		} else
-			throw_exception("获取网易微博ACCESS_TOKEN出错：{$data['error']}");
+			throw new Exception("获取网易微博ACCESS_TOKEN出错：{$data['error']}");
 	}
 	
 	/**
@@ -73,7 +73,7 @@ class T163SDK extends ThinkOauth{
 		if(!empty($data['id']))
 			return $data['id'];
 		else
-			throw_exception('没有获取到网易微博用户ID！');
+			throw new Exception('没有获取到网易微博用户ID！');
 	}
 	
 }

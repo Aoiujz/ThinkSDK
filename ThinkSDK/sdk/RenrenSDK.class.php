@@ -82,7 +82,7 @@ class RenrenSDK extends ThinkOauth{
 			unset($data['user']);
 			return $data;
 		} else
-			throw_exception("获取人人网ACCESS_TOKEN出错：{$data['error_description']}");
+			throw new Exception("获取人人网ACCESS_TOKEN出错：{$data['error_description']}");
 	}
 	
 	/**
@@ -94,6 +94,6 @@ class RenrenSDK extends ThinkOauth{
 		if(!empty($data['openid']))
 			return $data['openid'];
 		else
-			throw_exception('没有获取到人人网用户ID！');
+			throw new Exception('没有获取到人人网用户ID！');
 	}
 }

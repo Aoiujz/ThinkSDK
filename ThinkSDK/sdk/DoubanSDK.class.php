@@ -56,7 +56,7 @@ class DoubanSDK extends ThinkOauth{
 			unset($data['douban_user_id']);
 			return $data;
 		} else
-			throw_exception("获取豆瓣ACCESS_TOKEN出错：{$data['msg']}");
+			throw new Exception("获取豆瓣ACCESS_TOKEN出错：{$data['msg']}");
 	}
 	
 	/**
@@ -68,7 +68,7 @@ class DoubanSDK extends ThinkOauth{
 		if(isset($data['douban_user_id']))
 			return $data['douban_user_id'];
 		else
-			throw_exception('没有获取到豆瓣用户ID！');
+			throw new Exception('没有获取到豆瓣用户ID！');
 	}
 	
 }
