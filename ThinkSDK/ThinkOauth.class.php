@@ -100,7 +100,7 @@ abstract class ThinkOauth{
 			$this->AppSecret = $config['APP_SECRET'];
 			$this->Token     = $token; //设置获取到的TOKEN
 		} else {
-			throw new Extension('请配置您申请的应用APP_KEY和APP_SECRET');
+			throw new Exception('请配置您申请的应用APP_KEY和APP_SECRET');
 		}
 	}
 
@@ -129,7 +129,7 @@ abstract class ThinkOauth{
 		if(isset($config['CALLBACK']))
 			$this->Callback = $config['CALLBACK'];
 		else
-			throw new Extension('请配置回调页面地址');
+			throw new Exception('请配置回调页面地址');
 	}
 	
 	/**
@@ -150,7 +150,7 @@ abstract class ThinkOauth{
 			if(is_array($_param)){
 				$params = array_merge($params, $_param);
 			} else {
-				throw new Extension('AUTHORIZE配置不正确！');
+				throw new Exception('AUTHORIZE配置不正确！');
 			}
 		}
 		
@@ -226,7 +226,7 @@ abstract class ThinkOauth{
 				$opts[CURLOPT_POSTFIELDS] = $vars;
 				break;
 			default:
-				throw new Extension('不支持的请求方式！');
+				throw new Exception('不支持的请求方式！');
 		}
 		
 		/* 初始化并执行curl请求 */
@@ -235,7 +235,8 @@ abstract class ThinkOauth{
 		$data  = curl_exec($ch);
 		$error = curl_error($ch);
 		curl_close($ch);
-		$error && throw new Extension('请求发生错误：' . $error);
+		if($error) 
+			throw new Exception('请求发生错误：' . $error);
 		return  $data;
 	}
 	
