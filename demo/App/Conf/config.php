@@ -85,5 +85,23 @@ return array(
 		'APP_KEY'    => '', //应用注册成功后分配的 APP ID
 		'APP_SECRET' => '', //应用注册成功后分配的KEY
 		'CALLBACK'   => URL_CALLBACK . 'taobao',
-	)
+	),
+	//百度配置
+	'THINK_SDK_BAIDU' => array(
+		'APP_KEY'    => '', //应用注册成功后分配的 APP ID
+		'APP_SECRET' => '', //应用注册成功后分配的KEY
+		'CALLBACK'   => URL_CALLBACK . 'baidu',
+	),
+	//开心网配置
+	'THINK_SDK_KAIXIN' => array(
+		'APP_KEY'    => '', //应用注册成功后分配的 APP ID
+		'APP_SECRET' => '', //应用注册成功后分配的KEY
+		'CALLBACK'   => URL_CALLBACK . 'kaixin',
+	),
+	//搜狐微博配置
+	'THINK_SDK_SOHU' => array(
+		'APP_KEY'    => '', //应用注册成功后分配的 APP ID
+		'APP_SECRET' => '', //应用注册成功后分配的KEY
+		'CALLBACK'   => URL_CALLBACK . 'sohu',
+	),
 );

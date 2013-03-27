@@ -206,5 +206,53 @@ class TypeEvent{
 			throw_exception("获取淘宝网用户信息失败：{$data['error_response']['msg']}");
 		}
 	}
+	
+	//登录成功，获取百度用户信息
+	public function baidu($token){
+		$baidu = ThinkOauth::getInstance('baidu', $token);
+		$data  = $baidu->call('passport/users/getLoggedInUser');
+		
+		if(!empty($data['uid'])){
+			$userInfo['type'] = 'BAIDU';
+			$userInfo['name'] = $data['uid'];
+			$userInfo['nick'] = $data['uname'];
+			$userInfo['head'] = "http://tb.himg.baidu.com/sys/portrait/item/{$data['portrait']}";
+			return $userInfo;
+		} else {
+			throw_exception("获取百度用户信息失败：{$data['error_msg']}");
+		}
+	}
+
+	//登录成功，获取开心网用户信息
+	public function kaixin($token){
+		$kaixin = ThinkOauth::getInstance('kaixin', $token);
+		$data   = $kaixin->call('users/me');
+		
+		if(!empty($data['uid'])){
+			$userInfo['type'] = 'KAIXIN';
+			$userInfo['name'] = $data['uid'];
+			$userInfo['nick'] = $data['name'];
+			$userInfo['head'] = $data['logo50'];
+			return $userInfo;
+		} else {
+			throw_exception("获取开心网用户信息失败：{$data['error']}");
+		}
+	}
+
+	//登录成功，获取搜狐用户信息
+	public function sohu($token){
+		$sohu = ThinkOauth::getInstance('sohu', $token);
+		$data = $sohu->call('i/prv/1/user/get-basic-info');
+		
+		if('success' == $data['message'] && !empty($data['data'])){
+			$userInfo['type'] = 'SOHU';
+			$userInfo['name'] = $data['data']['open_id'];
+			$userInfo['nick'] = $data['data']['nick'];
+			$userInfo['head'] = $data['data']['icon'];
+			return $userInfo;
+		} else {
+			throw_exception("获取搜狐用户信息失败：{$data['message']}");
+		}
+	}
 
 }
