@@ -100,7 +100,7 @@ abstract class ThinkOauth{
 			$this->AppSecret = $config['APP_SECRET'];
 			$this->Token     = $token; //设置获取到的TOKEN
 		} else {
-			throw new Exception('请配置您申请的应用APP_KEY和APP_SECRET');
+			throw new Exception('请配置您在申请的APP_KEY和APP_SECRET');
 		}
 	}
 
@@ -118,7 +118,7 @@ abstract class ThinkOauth{
     		halt(L('_CLASS_NOT_EXIST_') . ':' . $name);
     	}
     }
-	
+
 	/**
 	 * 初始化配置
 	 */
@@ -153,7 +153,6 @@ abstract class ThinkOauth{
 				throw new Exception('AUTHORIZE配置不正确！');
 			}
 		}
-		
 		return $this->GetRequestCodeURL . '?' . http_build_query($params);
 	}
 	
@@ -235,8 +234,7 @@ abstract class ThinkOauth{
 		$data  = curl_exec($ch);
 		$error = curl_error($ch);
 		curl_close($ch);
-		if($error) 
-			throw new Exception('请求发生错误：' . $error);
+		if($error) throw new Exception('请求发生错误：' . $error);
 		return  $data;
 	}
 	
@@ -244,7 +242,7 @@ abstract class ThinkOauth{
 	 * 抽象方法，在SNSSDK中实现
 	 * 组装接口调用参数 并调用接口
 	 */
-	abstract protected function call($api, $param = '', $method = 'GET');
+	abstract protected function call($api, $param, $method);
 	
 	/**
 	 * 抽象方法，在SNSSDK中实现

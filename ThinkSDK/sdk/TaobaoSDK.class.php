@@ -60,7 +60,7 @@ class TaobaoSDK extends ThinkOauth{
 			unset($data['taobao_user_id']);
 			return $data;
 		} else
-			throw_exception("获取淘宝网ACCESS_TOKEN出错：{$data['error']}");
+			throw new Exception("获取淘宝网ACCESS_TOKEN出错：{$data['error']}");
 	}
 	
 	/**
@@ -72,7 +72,7 @@ class TaobaoSDK extends ThinkOauth{
 		if(isset($data['openid']))
 			return $data['openid'];
 		else
-			throw_exception('没有获取到淘宝网用户ID！');
+			throw new Exception('没有获取到淘宝网用户ID！');
 	}
 	
 }

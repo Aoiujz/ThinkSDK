@@ -38,7 +38,7 @@ class RenrenSDK extends ThinkOauth{
 	 * @return json
 	 */
 	public function call($api, $param = '', $method = 'POST'){
-		/* 新浪微博调用公共参数 */
+		/* 人人网调用公共参数 */
 		$params = array(
 			'method'       => $api,
 			'access_token' => $this->Token['access_token'],
