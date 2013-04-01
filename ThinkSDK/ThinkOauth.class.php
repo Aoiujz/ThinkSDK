@@ -95,12 +95,12 @@ abstract class ThinkOauth{
 
 		//获取应用配置
 		$config = C("THINK_SDK_{$this->Type}");
-		if($config['APP_KEY'] && $config['APP_SECRET']){
+		if(empty($config['APP_KEY']) || empty($config['APP_SECRET'])){
+			throw new Exception('请配置您申请的APP_KEY和APP_SECRET');
+		} else {
 			$this->AppKey    = $config['APP_KEY'];
 			$this->AppSecret = $config['APP_SECRET'];
 			$this->Token     = $token; //设置获取到的TOKEN
-		} else {
-			throw new Exception('请配置您在申请的APP_KEY和APP_SECRET');
 		}
 	}
 
@@ -124,9 +124,9 @@ abstract class ThinkOauth{
 	 */
 	private function config(){
 		$config = C("THINK_SDK_{$this->Type}");
-		if(isset($config['AUTHORIZE']) && !empty($config['AUTHORIZE']))
+		if(!empty($config['AUTHORIZE']))
 			$this->Authorize = $config['AUTHORIZE'];
-		if(isset($config['CALLBACK']))
+		if(!empty($config['CALLBACK']))
 			$this->Callback = $config['CALLBACK'];
 		else
 			throw new Exception('请配置回调页面地址');
