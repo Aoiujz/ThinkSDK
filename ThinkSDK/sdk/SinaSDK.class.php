@@ -37,13 +37,14 @@ class SinaSDK extends ThinkOauth{
 	 * @param  string $method HTTP请求方法 默认为GET
 	 * @return json
 	 */
-	public function call($api, $param = '', $method = 'GET'){		
+	public function call($api, $param = '', $method = 'GET', $multi = false){		
 		/* 新浪微博调用公共参数 */
 		$params = array(
 			'access_token' => $this->Token['access_token'],
 		);
 		
-		$data = $this->http($this->url($api, '.json'), $this->param($params, $param), $method);
+		$vars = $this->param($params, $param);
+		$data = $this->http($this->url($api, '.json'), $vars, $method, array(), $multi);
 		return json_decode($data, true);
 	}
 	

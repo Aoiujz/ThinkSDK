@@ -43,7 +43,7 @@ class QqSDK extends ThinkOauth{
 	 * @param  string $method HTTP请求方法 默认为GET
 	 * @return json
 	 */
-	public function call($api, $param = '', $method = 'GET'){
+	public function call($api, $param = '', $method = 'GET', $multi = false){
 		/* 腾讯QQ调用公共参数 */
 		$params = array(
 			'oauth_consumer_key' => $this->AppKey,

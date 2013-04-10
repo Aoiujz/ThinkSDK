@@ -43,7 +43,7 @@ class MsnSDK extends ThinkOauth{
 	 * @param  string $method HTTP请求方法 默认为GET
 	 * @return json
 	 */
-	public function call($api, $param = '', $method = 'GET'){
+	public function call($api, $param = '', $method = 'GET', $multi = false){
 		/*  MSN 调用公共参数 */
 		$params = array(
 			'access_token' => $this->Token['access_token'],

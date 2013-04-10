@@ -204,8 +204,9 @@ abstract class ThinkOauth{
 	 * @param  string $method 请求方法GET/POST
 	 * @return array  $data   响应数据
 	 */
-	protected function http($url, $params, $method = 'GET', $header = array()){
-		$vars = http_build_query($params);
+	protected function http($url, $params, $method = 'GET', $header = array(), $multi = false){
+		//判断是否传输文件
+		$vars = $multi ? $params : http_build_query($params);
 		$opts = array(
 			CURLOPT_TIMEOUT        => 30,
 			CURLOPT_RETURNTRANSFER => 1,
@@ -242,7 +243,7 @@ abstract class ThinkOauth{
 	 * 抽象方法，在SNSSDK中实现
 	 * 组装接口调用参数 并调用接口
 	 */
-	abstract protected function call($api, $param = '', $method = 'GET');
+	abstract protected function call($api, $param = '', $method = 'GET', $multi = false);
 	
 	/**
 	 * 抽象方法，在SNSSDK中实现

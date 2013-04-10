@@ -37,7 +37,7 @@ class TaobaoSDK extends ThinkOauth{
 	 * @param  string $method HTTP请求方法 默认为GET
 	 * @return json
 	 */
-	public function call($api, $param = '', $method = 'GET'){		
+	public function call($api, $param = '', $method = 'GET', $multi = false){		
 		/* 淘宝网调用公共参数 */
 		$params = array(
 			'method'       => $api,
