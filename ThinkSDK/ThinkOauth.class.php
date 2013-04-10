@@ -205,8 +205,6 @@ abstract class ThinkOauth{
 	 * @return array  $data   响应数据
 	 */
 	protected function http($url, $params, $method = 'GET', $header = array(), $multi = false){
-		//判断是否传输文件
-		$vars = $multi ? $params : http_build_query($params);
 		$opts = array(
 			CURLOPT_TIMEOUT        => 30,
 			CURLOPT_RETURNTRANSFER => 1,
@@ -218,12 +216,14 @@ abstract class ThinkOauth{
 		/* 根据请求类型设置特定参数 */
 		switch(strtoupper($method)){
 			case 'GET':
-				$opts[CURLOPT_URL] = $url . '?' . $vars;
+				$opts[CURLOPT_URL] = $url . '?' . http_build_query($params);
 				break;
 			case 'POST':
+				//判断是否传输文件
+				$params = $multi ? $params : http_build_query($params);
 				$opts[CURLOPT_URL] = $url;
 				$opts[CURLOPT_POST] = 1;
-				$opts[CURLOPT_POSTFIELDS] = $vars;
+				$opts[CURLOPT_POSTFIELDS] = $params;
 				break;
 			default:
 				throw new Exception('不支持的请求方式！');
