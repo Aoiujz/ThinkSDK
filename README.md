@@ -1,5 +1,3 @@
-<div style="font-family: '微软雅黑'">
-
 ### 1，SDK简介
 
 本SDK是基于ThinkPHP开发类库扩展，因此只能在ThinkPHP平台下使用（ThinkPHP版本要求2.0以上）。DEMO中用到了控制器分层，因此运行DEMO需使用ThinkPHP3.1.2版本。
@@ -52,5 +50,3 @@ SDK的配置格式如下（可参考DEMO中的配置）
 	import("ORG.ThinkSDK.ThinkOauth"); //导入SDK基类
 	$qq   = ThinkOauth::getInstance('qq', $token); //实例化腾讯QQ开放平台对象 $token 参数为授权成功后获取到的 $token
 	$data = $qq->call('user/get_user_info'); //调用接口 
-
-<div>
