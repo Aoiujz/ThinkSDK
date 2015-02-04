@@ -37,16 +37,15 @@ class RenrenSDK extends ThinkOauth{
 	 * @param  string $method HTTP请求方法 默认为GET
 	 * @return json
 	 */
-	public function call($api, $param = '', $method = 'POST', $multi = false){
+	public function call($api, $param = '', $method = 'GET', $multi = false){
 		/* 人人网调用公共参数 */
 		$params = array(
-			'method'       => $api,
 			'access_token' => $this->Token['access_token'],
 			'v'            => '1.0',
 			'format'       => 'json',
 		);
 		
-		$data = $this->http($this->url(''), $this->param($params, $param), $method);
+		$data = $this->http($this->url($api), $this->param($params, $param), $method);
 		return json_decode($data, true);
 	}
 	

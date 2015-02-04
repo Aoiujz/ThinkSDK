@@ -80,13 +80,13 @@ class TypeEvent{
 	//登录成功，获取人人网用户信息
 	public function renren($token){
 		$renren = ThinkOauth::getInstance('renren', $token);
-		$data   = $renren->call('users.getInfo');
+		$data   = $renren->call('user/get');
 
-		if(!isset($data['error_code'])){
+		if(!isset($data['error'])){
 			$userInfo['type'] = 'RENREN';
-			$userInfo['name'] = $data[0]['name'];
-			$userInfo['nick'] = $data[0]['name'];
-			$userInfo['head'] = $data[0]['headurl'];
+			$userInfo['name'] = $data['response']['name'];
+			$userInfo['nick'] = $data['response']['name'];
+			$userInfo['head'] = $data['response']['avatar'][3]['url'];
 			return $userInfo;
 		} else {
 			throw_exception("获取人人网用户信息失败：{$data['error_msg']}");
