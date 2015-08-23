@@ -28,8 +28,8 @@ class SohuSDK extends ThinkOauth{
 	 * API根路径
 	 * @var string
 	 */
-	protected $ApiBase = 'https://api.sohu.com/rest/';
-	
+	protected $ApiBase = 'https://api.sohu.com/rest/pp/prv/1/';
+
 	/**
 	 * 组装接口调用参数 并调用接口
 	 * @param  string $api    搜狐API
@@ -37,7 +37,7 @@ class SohuSDK extends ThinkOauth{
 	 * @param  string $method HTTP请求方法 默认为GET
 	 * @return json
 	 */
-	public function call($api, $param = '', $method = 'GET', $multi = false){		
+	public function call($api, $param = '', $method = 'GET', $multi = false){
 		/* 搜狐调用公共参数 */
 		$params = array(
 			'access_token' => $this->Token['access_token'],
@@ -46,7 +46,7 @@ class SohuSDK extends ThinkOauth{
 		$data = $this->http($this->url($api), $this->param($params, $param), $method);
 		return json_decode($data, true);
 	}
-	
+
 	/**
 	 * 解析access_token方法请求后的返回值
 	 * @param string $result 获取access_token的方法的返回值
@@ -60,7 +60,7 @@ class SohuSDK extends ThinkOauth{
 		} else
 			throw new Exception("获取搜狐ACCESS_TOKEN出错：{$data['error']}");
 	}
-	
+
 	/**
 	 * 获取当前授权应用的openid
 	 * @return string
@@ -72,5 +72,5 @@ class SohuSDK extends ThinkOauth{
 		else
 			throw new Exception('没有获取到搜狐用户ID！');
 	}
-	
+
 }

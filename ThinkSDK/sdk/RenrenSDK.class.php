@@ -28,7 +28,7 @@ class RenrenSDK extends ThinkOauth{
 	 * API根路径
 	 * @var string
 	 */
-	protected $ApiBase = 'http://api.renren.com/restserver.do';
+	protected $ApiBase = 'https://api.renren.com/v2/';
 
 	/**
 	 * 组装接口调用参数 并调用接口
@@ -44,11 +44,11 @@ class RenrenSDK extends ThinkOauth{
 			'v'            => '1.0',
 			'format'       => 'json',
 		);
-		
+
 		$data = $this->http($this->url($api), $this->param($params, $param), $method);
 		return json_decode($data, true);
 	}
-	
+
 	/**
 	 * 合并默认参数和额外参数
 	 * @param array $params  默认参数
@@ -57,7 +57,7 @@ class RenrenSDK extends ThinkOauth{
 	 */
 	protected function param($params, $param){
 		$params = parent::param($params, $param);
-		
+
 		/* 签名 */
 		ksort($params);
 		$param = array();
@@ -83,7 +83,7 @@ class RenrenSDK extends ThinkOauth{
 		} else
 			throw new Exception("获取人人网ACCESS_TOKEN出错：{$data['error_description']}");
 	}
-	
+
 	/**
 	 * 获取当前授权应用的openid
 	 * @return string
