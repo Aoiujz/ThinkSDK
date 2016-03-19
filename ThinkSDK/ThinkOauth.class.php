@@ -205,12 +205,14 @@ abstract class ThinkOauth{
 	 * @return array  $data   响应数据
 	 */
 	protected function http($url, $params, $method = 'GET', $header = array(), $multi = false){
+		$UserAgent = 'Mozilla/5.0 (Windows; U; Windows NT 5.2) AppleWebKit/525.13 (KHTML, like Gecko) Chrome/0.2.149.27 Safari/525.13';
 		$opts = array(
 			CURLOPT_TIMEOUT        => 30,
 			CURLOPT_RETURNTRANSFER => 1,
 			CURLOPT_SSL_VERIFYPEER => false,
 			CURLOPT_SSL_VERIFYHOST => false,
 			CURLOPT_HTTPHEADER     => $header
+			CURLOPT_USERAGENT      => $UserAgent
 		);
 
 		/* 根据请求类型设置特定参数 */
